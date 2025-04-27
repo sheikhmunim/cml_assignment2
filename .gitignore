@@ -1,0 +1,10 @@
+# Ignore Python virtual environments
+cml/
+venv/
+env/
+*.pyd
+*.exe
+*.dll
+*.log
+__pycache__/
+*.pyc
