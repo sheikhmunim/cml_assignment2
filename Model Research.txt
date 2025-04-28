@@ -53,9 +53,3 @@ Research on Existing Machine Learning Models Built for Detecting Cancer in Cell 
 
     - Model: Transfer learning-based ResNet101
     - Performance: The ResNet101 model, utilizing transfer learning, achieved an accuracy of approximately 99.06%, outperforming a CNN model fully trained on colorectal cancer samples. This highlights the effectiveness of transfer learning in enhancing classification accuracy.
-
-
-
-
-
-
