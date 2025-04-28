@@ -1,0 +1,61 @@
+Research on Existing Machine Learning Models Built for Detecting Cancer in Cell Histopathologies
+
+
+1. K. Sirinukunwattana, S. E. A. Raza, Y. Tsang, D. R. J. Snead, I. A. Cree and N. M. Rajpoot, ”Locality Sensitive Deep Learning for Detection and Classification of Nuclei in Routine Colon Cancer Histology Images,” in IEEE Transactions on Medical Imaging, vol. 35, no. 5, pp. 1196-1206, May 2016, doi: 10.1109/TMI.2016.2525803.
+
+    - Baseline: Spatially Constrained CNN (SC-CNN)
+        - Purpose: Detect the centers of nuclei in histopathology images without requiring prior segmentation.​
+        - Input: Image patches centered around each pixel
+        - Output: A probability map indicating the likelihood of each pixel being at the center of a nucleus.
+        - Spatial Constraint: The network is trained to produce high probabilities only in the vicinity of actual nucleus centers, reducing false positives.
+        - Architecture: A convolutional neural network designed to regress the likelihood of nucleus centers, incorporating spatial constraints to enhance detection accuracy.​
+    
+    - 2nd model: Neighbouring Ensemble Model (NEP) 
+        - Purpose: Classify detected nuclei into one of four categories: epithelial, inflammatory, fibroblast, or miscellaneous.​
+        - Input: Features extracted from the detected nucleus and its neighboring nuclei.
+        - Ensemble Approach: Combines predictions from multiple classifiers, each considering different neighborhood configurations, to improve robustness.
+        - Integration with SC-CNN: Utilizes the detections from SC-CNN to define the regions of interest for classification.
+    
+    - Performance Metric: Achieved an average F1 score of 0.775, outperforming other contemporary methods.
+    Notable Advantage: The combined approach of SC-CNN and NEP eliminates the need for explicit nucleus segmentation, streamlining the analysis pipeline.​
+
+
+2. Davri, A., Birbas, E., Kanavos, T., Ntritsos, G., Giannakeas, N., Tzallas, A. T., & Batistatou, A. (2022). Deep Learning on Histopathological Images for Colorectal Cancer Diagnosis: A Systematic Review. Diagnostics, 12(4), 837. https://doi.org/10.3390/diagnostics12040837
+
+    - Baseline: Traditional machine learning classifiers such as Support Vector Machines (SVM) and Random Forests.
+    - Final: Deep Convolutional Neural Networks (CNNs), including architectures like VGG16 and ResNet.
+    - Input: Histopathological images from colorectal cancer datasets.
+    - Preprocessing: Image normalization and augmentation techniques.
+    - Training Details: Specific hyperparameters like learning rate, batch size, and number of epochs were adjusted based on model architecture and dataset characteristics.
+
+3. Georgiou, N., Kolias, P., & Chouvarda, I. (2024). Machine Learning Models for the Classification of Histopathological Images of Colorectal Cancer. Applied Sciences, 14(22), 10731. https://doi.org/10.3390/app142210731
+
+    - Baseline: K-Nearest Neighbors (KNN), Decision Trees
+    - Final: XGBoost
+    - Dataset: Colon cancer images annotated into eight distinct categories.​
+    - Performance Metrics: XGBoost Accuracy: 89.79% ​
+
+4. Karthik, R., Thalanki, V., Yadav, P. (2024). Deep Learning-Based Histopathological Analysis for Colon Cancer Diagnosis: A Comparative Study of CNN and Transformer Models with Image Preprocessing Techniques. In: Abraham, A., Bajaj, A., Hanne, T., Siarry, P. (eds) Intelligent Systems Design and Applications. ISDA 2023. Lecture Notes in Networks and Systems, vol 1046. Springer, Cham. https://doi.org/10.1007/978-3-031-64813-7_11
+
+    - Baseline: Quadratic Discriminant Analysis (QDA), Artificial Neural Networks (ANN), SVM, and Classification Decision Trees (CDT).
+    - Final: Deep feature extraction using pre-trained models like VGG16, VGG19, DenseNet169, and DenseNet201, followed by ensemble learning techniques.
+    - Feature Extraction: Leveraged pre-trained models to extract deep features from histopathological images.
+    - Classification: Applied ensemble learning methods to classify images based on extracted features.
+    - Training Details: Adjusted hyperparameters such as learning rate and batch size to optimize model accuracy.
+
+5. Hasan, M. A., Haque, F., Sabuj, S. R., Sarker, H., Goni, M. O. F., Rahman, F., & Rashid, M. M. (2024). An End-to-End Lightweight Multi-Scale CNN for the Classification of Lung and Colon Cancer with XAI Integration. Technologies, 12(4), 56. https://doi.org/10.3390/technologies12040056
+
+    - Model: A novel lightweight multi-scale CNN model with 1.1 million trainable parameters
+    - Dataset: LC25000 (publicly available on Kaggle)
+    - Performance: Achieved an accuracy of 99.20% for multi-class predictions involving five classes. The model incorporates features extracted at multiple scales, effectively capturing both local and global patterns within the input data. 
+
+6. Deiva Nayagam, R., Selvathi, D., Selvaraj, H. (2025). Transfer Learning Approach with ResNet Architecture for Colon Cancer Classification Using Histopathological Images. In: Borowik, G., Chmaj, G., Waszkowski, R. (eds) Models and Methods for Systems Engineering. Studies in Big Data, vol 165. Springer, Cham. https://doi.org/10.1007/978-3-031-76440-0_12
+
+    - Model: Transfer learning-based ResNet101
+    - Performance: The ResNet101 model, utilizing transfer learning, achieved an accuracy of approximately 99.06%, outperforming a CNN model fully trained on colorectal cancer samples. This highlights the effectiveness of transfer learning in enhancing classification accuracy.
+
+
+
+
+
+
